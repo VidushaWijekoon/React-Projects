@@ -1,3 +1,3 @@
 # react-projects
 
-1. e-commerce project tailwindcss and firebase
+1. e-commerce project tailwindcss, meterial UI and firebase
