@@ -32,7 +32,7 @@ const Header = () => {
           <input
             type="text"
             placeholder="Search"
-            className="p-2 outline-none font-semibold text-sm w-[200px] bg-inherit ml-1"
+            className="p-2 outline-none font-semibold text-sm w-[200px] bg-inherit ml-1 hidden sm:inline-block"
           />
           {/* <img
             src={search}

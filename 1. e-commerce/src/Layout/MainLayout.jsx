@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 
 const MainLayout = () => {
   return (
-    <div className="w-full h-screen">
+    <div className="w-screen h-screen overflow-hidden">
       <Header />
       <Outlet />
       <Footer />
