@@ -5,6 +5,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { IconButton } from "@mui/material";
 
+let clicked = true;
+
 const Header = () => {
   const [isSearch, setIsSearch] = useState(false);
 
@@ -74,6 +76,8 @@ const Header = () => {
             onClick={() => {
               if (window.innerWidth < 640) {
                 setIsSearch(!isSearch);
+                clicked = !clicked;
+                console.log(clicked);
               }
             }}
           >

@@ -11,27 +11,27 @@ const categoryArr = [
   {
     imageUrl: "https://wallpaperaccess.com/full/267434.jpg",
     title: "Category title 2",
-    categoryId: "category1",
+    categoryId: "category2",
   },
   {
     imageUrl: "https://wallpaperaccess.com/full/267434.jpg",
     title: "Category title 3",
-    categoryId: "category1",
+    categoryId: "category3",
   },
   {
     imageUrl: "https://wallpaperaccess.com/full/267434.jpg",
     title: "Category title 4",
-    categoryId: "category1",
+    categoryId: "category4",
   },
   {
     imageUrl: "https://wallpaperaccess.com/full/267434.jpg",
     title: "Category title 5",
-    categoryId: "category1",
+    categoryId: "category5",
   },
   {
     imageUrl: "https://wallpaperaccess.com/full/267434.jpg",
     title: "Category title 6",
-    categoryId: "category1",
+    categoryId: "category6",
   },
 ];
 
@@ -48,7 +48,7 @@ const Category = () => {
           <h1 className="text-lg font-bold mt-2 ml-2 mb-3">Main Categories</h1>
           <div className="grid grid-cols-3 grid-rows-[auto] gap-5">
             {categoryArr.map(({ imageUrl, title, categoryId }, index) => (
-              <CategoryItems
+              <CategoryUnitItems
                 key={index}
                 imageUrl={imageUrl}
                 title={title}
@@ -65,7 +65,7 @@ const Category = () => {
 
 export default Category;
 
-const CategoryItems = ({ imageUrl, title, index, categoryId }) => (
+const CategoryUnitItems = ({ imageUrl, title, index, categoryId }) => (
   <Link to={`/category/${categoryId}`}>
     <IconButton
       sx={{
