@@ -1,0 +1,7 @@
+.skills-heading h1 {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-top: 2.5rem;
+}

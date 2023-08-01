@@ -1,0 +1,34 @@
+.app_navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 10rem;
+}
+
+.app_navbar-logo span {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.app_navbar-links {
+  display: flex;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.app_navbar-links li {
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.p__opensans:hover {
+  color: var(--color-subtext);
+  border: 1px dotted var(--color-grey);
+  padding: 10px;
+  border-radius: 15px / 50px;
+}
+
+.app__navbar-smallscreen {
+  display: none;
+}
