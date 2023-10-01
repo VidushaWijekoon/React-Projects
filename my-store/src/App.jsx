@@ -1,14 +1,10 @@
 import React from "react";
-import Header from "./Components/Header/Header";
-import Body from "./Components/Body/Body";
-import Footer from "./Components/Footer/Footer";
+import AppRouter from "./Routers/AppRouter";
 
 const App = () => {
   return (
-    <div className="w-full h-screen">
-      <Header />
-      <Body />
-      <Footer />
+    <div>
+      <AppRouter />
     </div>
   );
 };
