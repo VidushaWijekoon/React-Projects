@@ -1,7 +1,16 @@
 import React from "react";
+import Header from "./Components/Header/Header";
+import Body from "./Components/Body/Body";
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <div className="w-full h-screen">
+      <Header />
+      <Body />
+      <Footer />
+    </div>
+  );
 };
 
 export default App;
