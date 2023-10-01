@@ -1,7 +1,6 @@
-import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import MainLayout from "../layouts/MainLayout";
-import Home from "../pages/Home";
+import MainLayout from "../Layouts/MainLayout";
+import Home from "../pages/Home/Home";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +14,6 @@ const router = createBrowserRouter([
     ],
   },
 ]);
-
 const AppRouter = () => {
   return <RouterProvider router={router} />;
 };
