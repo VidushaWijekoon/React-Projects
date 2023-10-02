@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="pt-[100px] p-5 w-full h-screen overflow-y-scroll">
       <Ads />
-      <Product title="Trending Production" />
+      <Product title="Tranding Products" rowsCount={1} slidesPerView={3} />
     </div>
   );
 };
