@@ -1,0 +1,25 @@
+.main__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainBlock__container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+.mainBlock__container img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.mainBlock__container .mainBlock__details p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
