@@ -1,25 +1,113 @@
+.header__container {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 100px;
+    background-color: #fafa12;
+}
+
+.header__container nav {
+    position: relative;
+}
+
+.header__container nav ul {
+    position: absolute;
+    top: -39px;
+    right: -20px;
+    height: 100vh;
+    padding: 20px 50px 50px;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    transition: all 400ms ease-in;
+}
+
+.header__container nav ul li {
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 400ms ease-in;
+}
+
+.header__container nav ul li:hover {
+    color: red;
+}
+
+.header__container .header_menuClose {
+    cursor: pointer;
+}
+
+.header__container .header__menu {
+    margin: 50px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
 .main__container {
+    margin: 0 auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1;
+}
+
+.main__container .main__left {
+    padding-right: 20px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
+    margin-right: 20px;
 }
 
-.mainBlock__container {
-    width: 90%;
+.main__container .main__left input {
+    width: 100%;
+    padding: 7px;
+}
+
+.main__container .main_right {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     gap: 20px;
 }
 
-.mainBlock__container img {
+.main__container .main_right .unit__container img {
     width: 100%;
     object-fit: contain;
 }
 
-.mainBlock__container .mainBlock__details p {
+.main__container .main_right .unit__container p {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .header__container nav ol {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .header__container nav ol li {
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .header__container nav ol li:hover {
+        color: red;
+        transition: all 400ms ease-in;
+    }
 }
