@@ -1,61 +1,51 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Contact from "./Pages/Contact";
+import ContactDetails from "./Pages/ContactDetails";
+import User from "./Pages/User";
+// const App = () => {
+//   return (
+//     <BrowserRouter>
+//       <Routes>
+//         <Route path="/" element={<Home />} />
+//         <Route path="/about" element={<About />} />
+//         <Route path="/contact" element={<Contact />} />
+//         <Route path="/contact/details" element={<ContactDetails />} />
+//         <Route path="/contact/:id" element={<User />} />
+//       </Routes>
+//     </BrowserRouter>
+//   );
+// };
+
+// New Method
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/about",
+    element: <About />,
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
+  },
+  {
+    path: "/contact/details",
+    element: <ContactDetails />,
+  },
+  {
+    path: "/contact/:id",
+    element: <User />,
+  },
+]);
 
 const App = () => {
-  const [apiID, setApiID] = useState("1");
-  const [data, setData] = useState({});
-  const [search, setSearch] = useState(0);
-
-  //   console.log(apiID);
-  //   console.log(data);
-
-  useEffect(() => {
-    console.log("effect start to runing");
-
-    const apiCall = async () => {
-      console.log("how many times data running");
-      const res = await fetch(
-        `https://jsonplaceholder.typicode.com/posts/${apiID}`
-      );
-      const data = await res.json();
-      if (data) {
-        setData(data);
-      }
-    };
-
-    if (apiID.length > 0 && Number(apiID) > 0 && Number(apiID) <= 100) {
-      console.log("effect start to run after if condition");
-      apiCall();
-    }
-
-    //   Clean Up Function
-    return () => {
-      console.log("clean up");
-      apiCall();
-    };
-    // eslint-disable-next-line
-  }, [search]);
-
-  return (
-    <div>
-      <input
-        type="text"
-        value={apiID}
-        onChange={(e) => {
-          setApiID(e.target.value);
-        }}
-        placeholder="Enter ID"
-      />
-      <button onClick={() => setSearch((pre) => (pre === 0 ? 1 : 0))}>
-        Search
-      </button>
-      {data && (
-        <div>
-          <h2>{data.title}</h2>
-          <p>{data.body}</p>
-        </div>
-      )}
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;

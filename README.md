@@ -7,3 +7,5 @@
 - Hyperchip Company Profile using React, Tailwindcss
 - Assignment MERN
 - Vidusha Wijekoon (Portfolio) tailwindcss, material UI, routers
+
+- Typescript Fundamentals
