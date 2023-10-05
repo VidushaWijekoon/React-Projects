@@ -1,149 +1,60 @@
-import React, { useState } from "react";
-import "./App.css";
-import Unit from "./Components/Unit";
-import Header from "./Components/Header";
+import React, { useEffect, useState } from "react";
 
 const App = () => {
-  //   const [imageUrl, setImageUrl] = useState("");
-  //   const [name, setName] = useState("");
-  //   const [city, setCity] = useState("");
-  //   const [position, setPosition] = useState("");
+  const [apiID, setApiID] = useState("1");
+  const [data, setData] = useState({});
+  const [search, setSearch] = useState(0);
 
-  const [inputData, setInputData] = useState({
-    imageUrl: "",
-    name: "",
-    city: "",
-    position: "",
-  });
-  const [myData, setMyData] = useState([]);
+  //   console.log(apiID);
+  //   console.log(data);
 
-  //   console.log(myData);
+  useEffect(() => {
+    console.log("effect start to runing");
+
+    const apiCall = async () => {
+      console.log("how many times data running");
+      const res = await fetch(
+        `https://jsonplaceholder.typicode.com/posts/${apiID}`
+      );
+      const data = await res.json();
+      if (data) {
+        setData(data);
+      }
+    };
+
+    if (apiID.length > 0 && Number(apiID) > 0 && Number(apiID) <= 100) {
+      console.log("effect start to run after if condition");
+      apiCall();
+    }
+
+    //   Clean Up Function
+    return () => {
+      console.log("clean up");
+      apiCall();
+    };
+    // eslint-disable-next-line
+  }, [search]);
 
   return (
-    <>
-      <Header />
-      <div className="main__container">
-        <div className="main__left">
-          <input
-            type="text"
-            value={inputData.imageUrl}
-            placeholder="Image Url"
-            onChange={(e) => {
-              e.preventDefault();
-              setInputData((preInputData) => ({
-                ...preInputData,
-                imageUrl: e.target.value,
-              }));
-            }}
-          />
-          <input
-            type="text"
-            value={inputData.name}
-            placeholder="Full Name"
-            onChange={(e) => {
-              e.preventDefault();
-              setInputData((preInputData) => ({
-                ...preInputData,
-                name: e.target.value,
-              }));
-            }}
-          />
-          <input
-            type="text"
-            value={inputData.city}
-            placeholder="City"
-            onChange={(e) => {
-              e.preventDefault();
-              setInputData((preInputData) => ({
-                ...preInputData,
-                city: e.target.value,
-              }));
-            }}
-          />
-          <input
-            type="text"
-            value={inputData.position}
-            placeholder="Position"
-            onChange={(e) => {
-              e.preventDefault();
-              setInputData((preInputData) => ({
-                ...preInputData,
-                position: e.target.value,
-              }));
-            }}
-          />
-          <button
-            type="submit"
-            onClick={() => {
-              setMyData((pre) => [
-                ...pre,
-                {
-                  image: inputData.imageUrl,
-                  name: inputData.name,
-                  city: inputData.city,
-                  position: inputData.position,
-                },
-              ]);
-
-              console.log({
-                image: inputData.imageUrl,
-                name: inputData.name,
-                city: inputData.city,
-                position: inputData.position,
-              });
-
-              setInputData((previousValue) => {
-                if (previousValue.imageUrl.length > 0) {
-                  return {
-                    ...previousValue,
-                    imageUrl: "",
-                  };
-                }
-              });
-
-              setInputData((previousValue) =>
-                previousValue.name.length > 0
-                  ? {
-                      ...previousValue,
-                      name: "",
-                    }
-                  : previousValue
-              );
-
-              setInputData((previousValue) =>
-                previousValue.city.length > 0
-                  ? {
-                      ...previousValue,
-                      city: "",
-                    }
-                  : previousValue
-              );
-              setInputData((previousValue) =>
-                previousValue.position.length > 0
-                  ? {
-                      ...previousValue,
-                      position: "",
-                    }
-                  : previousValue
-              );
-            }}
-          >
-            Submit
-          </button>
+    <div>
+      <input
+        type="text"
+        value={apiID}
+        onChange={(e) => {
+          setApiID(e.target.value);
+        }}
+        placeholder="Enter ID"
+      />
+      <button onClick={() => setSearch((pre) => (pre === 0 ? 1 : 0))}>
+        Search
+      </button>
+      {data && (
+        <div>
+          <h2>{data.title}</h2>
+          <p>{data.body}</p>
         </div>
-        <div className="main_right">
-          {myData?.map(({ image, name, city, position }, index) => (
-            <Unit
-              key={index}
-              image={image}
-              name={name}
-              city={city}
-              position={position}
-            />
-          ))}
-        </div>
-      </div>
-    </>
+      )}
+    </div>
   );
 };
 
