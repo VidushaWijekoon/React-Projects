@@ -1,5 +1,15 @@
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import Home from "./pages/Home/Home";
+
 const App = () => {
-  return <div className="text-danger"> App</div>;
+  return (
+    <>
+      <Header />
+      <Home />
+      <Footer />
+    </>
+  );
 };
 
 export default App;
