@@ -4,13 +4,12 @@ import DialpadIcon from "@mui/icons-material/Dialpad";
 
 const navigation = [
   { name: "Home", href: "#", current: true },
-  { name: "About", href: "#", current: false },
-  { name: "Resume", href: "#", current: false },
-  { name: "Skills", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Portfolio", href: "#", current: false },
-  { name: "Services", href: "#", current: false },
-  { name: "Contact", href: "#", current: false },
+  { name: "About", href: "#about", current: false },
+  { name: "Resume", href: "#resume", current: false },
+  { name: "Skills", href: "#skills", current: false },
+  { name: "Projects", href: "#projects", current: false },
+  { name: "Services", href: "#services", current: false },
+  { name: "Contact", href: "#contact", current: false },
 ];
 
 const Header = () => {

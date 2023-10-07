@@ -1,0 +1,24 @@
+.projects .icon-box h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 5px 0 10px 60px;
+}
+
+.projects .icon-box i {
+    font-size: 48px;
+    float: left;
+    color: #5846f9;
+}
+
+.projects .icon-box p {
+    font-size: 15px;
+    color: #848484;
+    margin-left: 60px;
+}
+
+.projects .image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+}

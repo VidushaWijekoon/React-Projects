@@ -18,6 +18,9 @@ const Hero = () => {
                   2019 with over 4 years of experience in software engineering
                   and web development.
                 </p>
+                <a href="" className="btn btn-sm" style={{ background: "red" }}>
+                  Download Resume
+                </a>
               </div>
             </div>
           </div>
