@@ -2,11 +2,10 @@ import "./services.css";
 
 const Services = () => {
   return (
-    <section id="services" className="services section-bg">
+    <section id="services" className="services section-bg mb-5">
       <div className="container" data-aos="fade-up">
         <div className="section-title">
-          <h2>Services</h2>
-          <p>Check our Services</p>
+          <h2 className="mb-5">Services Provice by Vidusha Wijekoon</h2>
         </div>
 
         <div className="row" data-aos="fade-up" data-aos-delay="200">

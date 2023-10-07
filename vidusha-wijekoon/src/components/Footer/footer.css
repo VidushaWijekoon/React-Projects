@@ -46,7 +46,6 @@
 #footer .social-links a {
     font-size: 18px;
     display: inline-block;
-    background: #ffb727;
     color: #fff;
     line-height: 1;
     padding: 8px 0;
@@ -59,8 +58,7 @@
 }
 
 #footer .social-links a:hover {
-    background: #f3a200;
-    color: #fff;
+    color: red;
     text-decoration: none;
 }
 

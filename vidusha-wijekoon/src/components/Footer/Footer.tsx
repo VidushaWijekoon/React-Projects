@@ -1,40 +1,39 @@
 import "./footer.css";
 
+import FacebookIcon from "@mui/icons-material/Facebook";
+
 const Footer = () => {
   return (
     <footer id="footer">
       <div className="container">
-        <h3>Laura Thomson</h3>
+        <h3>Vidusha Wijekoon</h3>
         <p>
           Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni
           eligendi fuga maxime saepe commodi placeat.
         </p>
         <div className="social-links">
           <a href="#" className="twitter">
-            <i className="bx bxl-twitter"></i>
+            <FacebookIcon />
           </a>
           <a href="#" className="facebook">
-            <i className="bx bxl-facebook"></i>
+            <FacebookIcon />
           </a>
           <a href="#" className="instagram">
-            <i className="bx bxl-instagram"></i>
+            <FacebookIcon />
           </a>
           <a href="#" className="google-plus">
-            <i className="bx bxl-skype"></i>
+            <FacebookIcon />
           </a>
           <a href="#" className="linkedin">
-            <i className="bx bxl-linkedin"></i>
+            <FacebookIcon />
           </a>
         </div>
         <div className="copyright">
-          &copy; Copyright{" "}
+          &copy; Copyright Designed by{" "}
           <strong>
-            <span>Laura</span>
+            <span>Vidusha Wijekoon</span>
           </strong>
           . All Rights Reserved
-        </div>
-        <div className="credits">
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </div>
     </footer>

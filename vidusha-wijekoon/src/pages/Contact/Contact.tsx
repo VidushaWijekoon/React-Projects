@@ -2,16 +2,10 @@ import "./contact.css";
 
 const Contact = () => {
   return (
-    <section id="contact" className="contact section-bg">
+    <section id="contact" className="contact section-bg mb-5">
       <div className="container" data-aos="fade-up">
         <div className="section-title">
-          <h2>Contact</h2>
-          <p>
-            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-            quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-            fugiat sit in iste officiis commodi quidem hic quas.
-          </p>
+          <h2 className="mb-5">Contact Vidusha Wijekoon</h2>
         </div>
 
         <div className="row">

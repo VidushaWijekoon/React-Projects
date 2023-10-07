@@ -1,10 +1,18 @@
+:root {
+    --mainBlack: #0B0C10;
+    --lightBlack: #1F2833;
+    --pragraph-text-color: #C5C6C7;
+    --header-text-color: #66FCF1;
+    --medium-blue: #45A29E;
+}
+
 a {
-    color: #18d26e;
+    color: var(--header-text-color);
     text-decoration: none !important;
 }
 
 a:hover {
-    color: #35e888;
+    color: var(--medium-blue);
     text-decoration: none !important;
 }
 
@@ -19,21 +27,14 @@ h6 {
 
 body {
     font-family: "Poppins", sans-serif !important;
-    /* font-family: 'Ubuntu', sans-serif !important; */
-    background: linear-gradient(-45deg, rgb(50, 50, 50), rgb(50, 50, 50), rgb(50, 50, 50), rgb(50, 50, 50));
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    color: #444444 !important;
+    background-color: var(--mainBlack) !important;
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+.swiper-pagination {
+    position: relative;
+    margin-top: 20px !important;
+}
+
+.swiper-pagination-bullet {
+    color: red !important;
 }
