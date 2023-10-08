@@ -6,13 +6,13 @@ const InvolvedProjects = [
     id: 1,
     title: "R-Tech International Website + CRM",
     description:
-      "Used technologies for the development, Bootstrap, JavaScript,Laravel, Livewire, MySQL.",
+      "Used technologies for the development, Bootstrap, JavaScript,Laravel, Livewire, MySQL",
   },
   {
     id: 2,
     title: "Al Sakb Computers ERP + Warehouse Inventory Management System",
     description:
-      "Used technologies for the development, Bootstrap, JavaScript, Ajax, PHP, MySQL.",
+      "Used technologies for the development, Bootstrap, JavaScript, Ajax, PHP, MySQL",
   },
   {
     id: 3,
@@ -30,36 +30,37 @@ const InvolvedProjects = [
     id: 5,
     title: "N-Soft ERP System",
     description:
-      "Used technologies for the development, Bootstrap, Vanilla JavaScript",
+      "Used technologies for the development, Bootstrap, JavaScript, Ajax, jQuery, PHP, MySQL",
   },
   {
     id: 6,
     title: "JN Real State",
-    description: "JN Real State Real State Project for Austalian Client",
+    description:
+      "Wordpress Developement project done during the soft tech one ",
   },
   {
     id: 7,
     title: "Taste of Rome",
     description:
-      "The projects that vidusha wijekoon involved in software development",
+      "Wordpress Developement project done during the soft tech one ",
   },
   {
     id: 8,
     title: "Nitmark.com",
     description:
-      "The projects that vidusha wijekoon involved in software development",
+      "Wordpress Developement project done during the soft tech one ",
   },
   {
     id: 1,
     title: "Aussie Paper Collection",
     description:
-      "The projects that vidusha wijekoon involved in software development",
+      "Wordpress Developement project done during the soft tech one ",
   },
   {
     id: 1,
     title: "The Riverston Grand Hotel",
     description:
-      "The projects that vidusha wijekoon involved in software development",
+      "Wordpress Developement project done during the soft tech one ",
   },
 ];
 

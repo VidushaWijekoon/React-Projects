@@ -1,7 +1,6 @@
 import "./about.css";
 
 import BlurOnIcon from "@mui/icons-material/BlurOn";
-import Picture from "../../assets/images/Vidusha_2023-10-02-removebg-preview.png";
 
 const About = () => {
   return (
@@ -17,8 +16,8 @@ const About = () => {
             data-aos="fade-right"
           >
             <img
-              src={Picture}
-              className="img-fluid img-thumbnail w-50 d-flex m-auto"
+              src="https://media.licdn.com/dms/image/C4D03AQFi9JzMaWCMqg/profile-displayphoto-shrink_800_800/0/1656307798136?e=2147483647&v=beta&t=MYM8_pa2ZxqIUfme-LW-Bj0FfLUBVG9IZyft72Gu4ds"
+              className="img-fluid img-thumbnail w-75 d-flex m-auto"
               alt=""
             />
           </div>

@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <header
       id="header"
-      className="fixed-top d-flex justify-content-center align-items-center header-transparent"
+      className="fixed-top d-flex justify-content-center align-items-center header-transparent page-header"
     >
       <nav id="navbar" className="navbar">
         {navigation.map((links) => (
