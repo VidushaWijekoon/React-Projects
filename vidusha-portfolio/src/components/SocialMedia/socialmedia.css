@@ -1,0 +1,33 @@
+.social-links {
+    margin-bottom: 25px;
+    display: flex;
+    margin-top: 15px;
+}
+
+.social-links a {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--pragraph-text-color);
+    line-height: 1;
+    margin-right: 8px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.social-links a:hover {
+    background: var(--header-text-color);
+    color: var(--mainBlack);
+}
+
+@media (max-width: 992px) {
+    .social-links {
+        margin-top: 15px;
+    }
+}
+
+.footer .social-links {
+    justify-content: center;
+}

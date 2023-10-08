@@ -1,0 +1,25 @@
+.projects .icon-box h6 {
+    font-weight: 700;
+    font-size: 14px;
+    margin: 5px 0 10px 60px;
+    color: var(--header-text-color);
+}
+
+.projects .icon-box p {
+    font-size: 13px;
+    color: var(--pragraph-text-color);
+    margin-left: 60px;
+}
+
+.projects .image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+}
+
+#icon-box-card {
+    box-shadow: -5px 10px 15px -3px rgba(7, 6, 6, 0.5);
+    padding: 10px 10px;
+    align-items: center;
+}

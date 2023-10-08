@@ -1,0 +1,12 @@
+.swiper-wrapper {
+    align-items: center;
+}
+
+.swiper-pagination {
+    position: relative;
+    margin-top: 20px !important;
+}
+
+.swiper-pagination-bullet {
+    color: red !important;
+}

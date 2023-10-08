@@ -1,0 +1,93 @@
+#hero {
+    width: 100%;
+    height: 100vh;
+}
+
+#hero .container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto !important;
+}
+
+#hero h1 {
+    margin: 0;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 56px;
+    color: var(--header-text-color);
+    text-transform: uppercase;
+}
+
+#hero h3 {
+    color: var(--gray);
+    margin: 10px 0 0 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#hero p {
+    color: var(--pragraph-text-color);
+    margin: 10px 0 0 0;
+}
+
+.typing_name {
+    width: 22ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.name-typing {
+    /*This part is important for centering*/
+    display: grid;
+    place-items: center;
+}
+
+.typing {
+    width: 22ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+@media (max-width: 991px) {
+    #hero {
+        height: 100vh;
+        text-align: center;
+    }
+    #hero .hero-img img {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    #hero h2 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    #hero .hero-img img {
+        width: 80%;
+    }
+    .hero-img {
+        display: none;
+    }
+}

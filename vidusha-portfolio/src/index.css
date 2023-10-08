@@ -1,0 +1,79 @@
+:root {
+    --mainBlack: #0B0C10;
+    --lightBlack: #030303de;
+    --gray: #C5C6C7;
+    --header-text-color: #66FCF1;
+    --medium-blue: #45A29E;
+    --pragraph-text-color: #eef5f4;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: var(--header-text-color);
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: var(--medium-blue);
+    text-decoration: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Raleway", sans-serif !important;
+}
+
+body {
+    font-family: "Poppins", sans-serif !important;
+    background-color: var(--mainBlack) !important;
+}
+
+.section-title h1 {
+    color: var(--medium-blue);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.section-title p {
+    color: var(--pragraph-text-color);
+}
+
+
+/* set the width and height of your scrollbar */
+
+::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+    background-color: var(--mainBlack);
+}
+
+
+/*style the track of your scrollbar*/
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: var(--mainBlack);
+}
+
+
+/*change background color of your scrollbar on hover*/
+
+::-webkit-scrollbar:hover {
+    background-color: var(--mainBlack);
+}
+
+
+/*style the thumb of your scrollbar*/
+
+::-webkit-scrollbar-thumb {
+    background: var(--header-text-color);
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px var(--header-text-color);
+}
