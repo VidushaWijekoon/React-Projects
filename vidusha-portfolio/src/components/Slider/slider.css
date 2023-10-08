@@ -10,3 +10,19 @@
 .swiper-pagination-bullet {
     color: red !important;
 }
+
+.swiper-slide img {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .swiper-slide img {
+        width: 50%;
+        display: flex;
+        margin: auto;
+        align-items: center;
+    }
+}

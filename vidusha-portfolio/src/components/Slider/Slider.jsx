@@ -94,11 +94,7 @@ export default function Slider() {
       >
         {sliderImages.map(({ imageUrl, id }, index) => (
           <SwiperSlide key={index}>
-            <img
-              src={imageUrl}
-              alt={`id${id}`}
-              className="rounded-lg w-100 align-items-center"
-            />
+            <img src={imageUrl} alt={`id${id}`} />
           </SwiperSlide>
         ))}
       </Swiper>

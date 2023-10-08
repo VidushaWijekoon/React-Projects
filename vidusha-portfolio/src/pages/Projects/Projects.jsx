@@ -85,7 +85,7 @@ const Projects = () => {
               <div className="icon-box mt-5 mt-lg-0 mb-4">
                 <div className="row" id="icon-box-card">
                   <div className="col-md-3">
-                    <img src={Image} alt="" className="w-100" />
+                    <img src={Image} alt="" />
                   </div>
                   <div className="col-md-9">
                     <h6 className="text-capitalize">{title}</h6>

@@ -5,12 +5,11 @@ import SocialMedia from "../../components/SocialMedia/SocialMedia";
 
 const Hero = () => {
   return (
-    <section id="hero" className="hero">
-      <div className="container">
-        <div className="row align-items-center h-100">
-          <div className="col-md-6">
+    <section id="hero" class="d-flex align-items-center">
+      <div class="container-fluid" data-aos="fade-up">
+        <div class="row justify-content-center">
+          <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
             <div className="name-typing d-flex">
-              <h1>I'm</h1>&nbsp; &nbsp;{" "}
               <h1 className="typing">Vidusha Wijekoon</h1>
             </div>
             <h3 className="mb-3 lh-base">
@@ -22,17 +21,17 @@ const Hero = () => {
               with over 4 years of experience in software engineering and web
               development.
             </p>
-            <SocialMedia />
-            <DownloadResume />
-          </div>
-          <div className="col-md-6">
-            <div className="hero-img">
-              <img
-                src={heroImage}
-                alt="vidusha wijekoon hero image"
-                className="w-100"
-              />
+            <div>
+              <SocialMedia />
+              <DownloadResume />
             </div>
+          </div>
+          <div
+            class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img"
+            data-aos="zoom-in"
+            data-aos-delay="150"
+          >
+            <img src={heroImage} class="img-fluid animated" alt="" />
           </div>
         </div>
       </div>

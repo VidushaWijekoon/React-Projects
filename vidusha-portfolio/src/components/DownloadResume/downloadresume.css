@@ -16,3 +16,9 @@
     color: var(--mainBlack);
     transition: all 200ms ease-in;
 }
+
+@media (max-width: 992px) {
+    #hero .download-resume-btn {
+        margin-bottom: 35px;
+    }
+}
