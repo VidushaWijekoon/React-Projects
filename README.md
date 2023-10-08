@@ -6,6 +6,6 @@
 - youtube tutorials - gpt3, hoobank, resturant
 - Hyperchip Company Profile using React, Tailwindcss
 - Assignment MERN
-- Vidusha Wijekoon (Portfolio) tailwindcss, material UI, routers
+- Vidusha Wijekoon (Portfolio) materail UI, Bootstrap, Router,
 
 - Typescript Fundamentals
