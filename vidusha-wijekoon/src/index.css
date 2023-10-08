@@ -1,9 +1,10 @@
 :root {
     --mainBlack: #0B0C10;
     --lightBlack: #1F2833;
-    --pragraph-text-color: #C5C6C7;
+    --gray: #C5C6C7;
     --header-text-color: #66FCF1;
     --medium-blue: #45A29E;
+    --pragraph-text-color: #eef5f4;
 }
 
 a {
@@ -28,6 +29,16 @@ h6 {
 body {
     font-family: "Poppins", sans-serif !important;
     background-color: var(--mainBlack) !important;
+}
+
+.section-title h1 {
+    color: var(--medium-blue);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.section-title p {
+    color: var(--pragraph-text-color);
 }
 
 .swiper-pagination {

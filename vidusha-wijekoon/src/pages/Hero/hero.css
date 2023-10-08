@@ -16,33 +16,53 @@
     font-size: 42px;
     font-weight: 700;
     line-height: 56px;
-    color: #0f394c;
+    color: var(--header-text-color);
     text-transform: uppercase;
 }
 
-#hero h2 {
-    color: #1c698c;
+#hero h3 {
+    color: var(--gray);
     margin: 10px 0 0 0;
     font-size: 20px;
+    font-weight: bold;
 }
 
-#hero .btn-get-started {
-    font-family: "Dosis", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 8px 28px;
-    border-radius: 3px;
-    transition: 0.5s;
-    margin-top: 25px;
-    color: #fff;
-    background: #49b5e7;
-    text-transform: uppercase;
+#hero p {
+    color: var(--pragraph-text-color);
+    margin: 10px 0 0 0;
 }
 
-#hero .btn-get-started:hover {
-    background: #76c7ed;
+.typing_name {
+    width: 22ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.name-typing {
+    /*This part is important for centering*/
+    display: grid;
+    place-items: center;
+}
+
+.typing {
+    width: 22ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
 }
 
 @media (max-width: 991px) {

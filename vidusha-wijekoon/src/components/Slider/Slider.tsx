@@ -36,62 +36,72 @@ export default function Slider() {
       >
         <SwiperSlide>
           <img
-            src="https://www.weblankan.com/wp-content/uploads/2022/09/website-developer-40-1.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
             alt=""
+            className="w-100"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://www.weblankan.com/wp-content/uploads/2022/09/website-developer-40-1.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
             alt=""
+            className="w-100"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://www.weblankan.com/wp-content/uploads/2022/09/website-developer-40-1.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
             alt=""
+            className="w-100"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://www.weblankan.com/wp-content/uploads/2022/09/website-developer-40-1.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
             alt=""
+            className="w-100"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://www.weblankan.com/wp-content/uploads/2022/09/website-developer-40-1.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
             alt=""
+            className="w-100"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://www.weblankan.com/wp-content/uploads/2022/09/website-developer-40-1.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
             alt=""
+            className="w-100"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://www.weblankan.com/wp-content/uploads/2022/09/website-developer-40-1.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
             alt=""
+            className="w-100"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://www.weblankan.com/wp-content/uploads/2022/09/website-developer-40-1.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
             alt=""
+            className="w-100"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://www.weblankan.com/wp-content/uploads/2022/09/website-developer-40-1.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
             alt=""
+            className="w-100"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://www.weblankan.com/wp-content/uploads/2022/09/website-developer-40-1.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
             alt=""
+            className="w-100"
           />
         </SwiperSlide>
       </Swiper>

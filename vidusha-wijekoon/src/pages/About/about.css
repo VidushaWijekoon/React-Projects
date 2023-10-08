@@ -1,12 +1,21 @@
 .about-me .content h3 {
     font-weight: 700;
     font-size: 26px;
-    color: #18d26e;
+    color: var(--header-text-color);
 }
 
 .about-me .content ul {
     list-style: none;
     padding: 0;
+}
+
+.about-me p {
+    color: var(--pragraph-text-color);
+}
+
+.about-me .button-icons {
+    color: var(--gray);
+    margin-right: 1.5rem;
 }
 
 .about-me .content ul li {
@@ -19,13 +28,10 @@
     margin-right: 10px;
 }
 
-.about-me .content ul i {
-    font-size: 16px;
-    margin-right: 5px;
-    color: #18d26e;
-    line-height: 0;
+.about-me strong {
+    color: var(--medium-blue);
 }
 
-.about-me .content p:last-child {
-    margin-bottom: 0;
+.about-me span {
+    color: var(--pragraph-text-color);
 }

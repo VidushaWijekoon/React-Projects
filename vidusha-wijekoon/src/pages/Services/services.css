@@ -1,39 +1,50 @@
-.services .icon-box {
-    margin-bottom: 20px;
-    padding: 30px;
-    border-radius: 6px;
-    background: #fff;
+.services {
+    background-size: cover;
+    padding: 60px 0;
+    position: relative;
 }
 
-.services .icon-box i {
-    float: left;
-    color: #5c8eb0;
-    font-size: 40px;
-    line-height: 0;
+.services .content {
+    padding: 30px 30px 30px 0;
 }
 
-.services .icon-box h4 {
-    margin-left: 70px;
+.services .content h3 {
     font-weight: 700;
-    margin-bottom: 15px;
-    font-size: 18px;
+    font-size: 34px;
+    color: var(--header-text-color);
+    margin-bottom: 30px;
 }
 
-.services .icon-box h4 a {
-    color: #365870;
-    transition: 0.3s;
+.services .content p {
+    margin-bottom: 30px;
+    color: var(--gray);
 }
 
-.services .icon-box .icon-box:hover h4 a {
-    color: #ff4a17;
+.services .icon-boxes .icon-box {
+    padding: 20px;
+    box-shadow: -5px 10px 15px -3px rgba(7, 6, 6, 0.5);
 }
 
-.services .icon-box p {
-    margin-left: 70px;
-    line-height: 24px;
-    font-size: 14px;
+.services .icon-boxes .icon-box h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    color: var(--medium-blue);
 }
 
-.services .icon-box:hover h4 a {
-    color: #ff4a17;
+.services .icon-boxes .icon-box p {
+    font-size: 15px;
+    color: var(--pragraph-text-color);
+}
+
+@media (max-width: 1200px) {
+    .services .content {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .services {
+        text-align: center;
+    }
 }

@@ -1,5 +1,6 @@
 import "./hero.css";
 import heroImage from "../../assets/images/hero-img.png";
+import DownloadResume from "../../components/DownloadResume/DownloadResume";
 
 const Hero = () => {
   return (
@@ -7,22 +8,20 @@ const Hero = () => {
       <div className="container">
         <div className="row align-items-center h-100">
           <div className="col-md-6">
-            <div className=" ">
-              <div className="">
-                <h1>I'm Vidusha Wijekoon </h1>
-                <h4>
-                  B.Eng Engineering in Software Engineer & Full-Stack Developer
-                </h4>
-                <p>
-                  I graduated as a software engineer from Sichuan University in
-                  2019 with over 4 years of experience in software engineering
-                  and web development.
-                </p>
-                <a href="" className="btn btn-sm" style={{ background: "red" }}>
-                  Download Resume
-                </a>
-              </div>
+            <div className="name-typing d-flex">
+              <h1>I'm</h1>&nbsp; &nbsp;{" "}
+              <h1 className="typing">Vidusha Wijekoon</h1>
             </div>
+            <h3 className="mb-3 lh-base">
+              B.Eng Engineering in Software Engineer &amp; <br /> Full-Stack
+              Developer
+            </h3>
+            <p className="lh-base">
+              I graduated as a software engineer from Sichuan University in 2019
+              with over 4 years of experience in software engineering and web
+              development.
+            </p>
+            <DownloadResume />
           </div>
           <div className="col-md-6">
             <div className=" ">

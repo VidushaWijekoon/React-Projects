@@ -2,17 +2,12 @@
     font-size: 20px;
     font-weight: 700;
     margin: 5px 0 10px 60px;
-}
-
-.projects .icon-box i {
-    font-size: 48px;
-    float: left;
-    color: #5846f9;
+    color: var(--header-text-color);
 }
 
 .projects .icon-box p {
     font-size: 15px;
-    color: #848484;
+    color: var(--pragraph-text-color);
     margin-left: 60px;
 }
 
@@ -21,4 +16,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 400px;
+}
+
+#icon-box-card {
+    box-shadow: -5px 10px 15px -3px rgba(7, 6, 6, 0.5);
+    padding: 10px 10px;
+    align-items: center;
 }

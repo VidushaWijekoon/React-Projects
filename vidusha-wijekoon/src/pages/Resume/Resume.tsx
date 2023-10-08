@@ -5,7 +5,7 @@ const Resume = () => {
     <section id="resume" className="resume mb-5">
       <div className="container">
         <div className="section-title">
-          <h2 className="text-uppercase">Check Vidusha Wijekoon Resume</h2>
+          <h1 className="text-uppercase">Check Vidusha Wijekoon Resume</h1>
         </div>
 
         <div className="row">

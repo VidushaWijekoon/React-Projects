@@ -8,7 +8,7 @@ const About = () => {
     <section id="about" className="about mb-5">
       <div className="about-me container">
         <div className="section-title mb-5">
-          <h2 className="text-uppercase">Learn more about Vidusha Wijekoon</h2>
+          <h1 className="text-uppercase">Learn more about Vidusha Wijekoon</h1>
         </div>
 
         <div className="row">
@@ -31,19 +31,19 @@ const About = () => {
               <div className="col-lg-6">
                 <ul>
                   <li>
-                    <BlurOnIcon className="mr-2" />
+                    <BlurOnIcon className="mr-2 button-icons" />
                     <strong>Birthday:</strong> <span>11 May 1990</span>
                   </li>
                   <li>
-                    <BlurOnIcon className="mr-2" />
+                    <BlurOnIcon className="mr-2 button-icons" />
                     <strong>UAE Phone:</strong> <span>(+971) 58 825 0962</span>
                   </li>
                   <li>
-                    <BlurOnIcon className="mr-2" />
+                    <BlurOnIcon className="mr-2 button-icons" />
                     <strong>Local Phone:</strong> <span>(+94) 76 887 1747</span>
                   </li>
                   <li>
-                    <BlurOnIcon className="mr-2" />
+                    <BlurOnIcon className="mr-2 button-icons" />
                     <strong>City:</strong> <span>New York, USA</span>
                   </li>
                 </ul>
@@ -51,25 +51,29 @@ const About = () => {
               <div className="col-lg-6">
                 <ul>
                   <li>
-                    <BlurOnIcon className="mr-2" />
+                    <BlurOnIcon className="mr-2 button-icons" />
                     <strong>Age:</strong> <span>33</span>
                   </li>
                   <li>
-                    <BlurOnIcon className="mr-2" />
+                    <BlurOnIcon className="mr-2 button-icons" />
                     <strong>Degree:</strong> <span>Bachelor of Engineer</span>
                   </li>
                   <li>
-                    <BlurOnIcon className="mr-2" />
+                    <BlurOnIcon className="mr-2 button-icons" />
                     <strong>Email:</strong>{" "}
                     <span>vidusha.wijekoon11@gmail.com</span>
                   </li>
                   <li>
-                    <BlurOnIcon className="mr-2" />
+                    <BlurOnIcon className="mr-2 button-icons" />
                     <strong>Freelance:</strong> <span>Available</span>
                   </li>
                 </ul>
               </div>
             </div>
+          </div>
+        </div>
+        <div className="row mt-3">
+          <div className="col-md-12">
             <p>
               I am ambitious about continuing to learn and explore new
               technologies to improve my depth of knowledge, and my inspiration
