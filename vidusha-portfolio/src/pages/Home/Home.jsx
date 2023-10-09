@@ -14,7 +14,7 @@ const Home = () => {
     <>
       <Hero fullname={fullname} />
       <About fullname={fullname} />
-      <Resume />
+      <Resume fullname={fullname} />
       <Skills />
       <Projects />
       <Services fullname={fullname} />

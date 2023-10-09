@@ -30,7 +30,7 @@ const personalInfomation = [
   {
     id: 6,
     title: "Degree:",
-    description: "B.ENG Software Engineer",
+    description: "B.Eng in Software Engineering",
   },
   {
     id: 7,
