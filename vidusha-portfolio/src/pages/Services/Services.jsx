@@ -27,7 +27,7 @@ const servicesProvide = [
   },
 ];
 
-const Services = () => {
+const Services = ({ fullname }) => {
   return (
     <section id="services" className="services">
       <div className="container">
@@ -37,12 +37,14 @@ const Services = () => {
             data-aos="fade-right"
           >
             <div className="content">
-              <h3>Services Provide By Vidusha Wijekoon</h3>
+              <h3 className="text-capitalize">
+                Services Provide By {fullname}
+              </h3>
               <p>
-                The services provided by vidusha wijekoon technology division
-                have played a pivotal role in driving innovation within the
-                industry. My goal is to exceed your expectations with the
-                quality and efficiency of the services provided.
+                The services provided by {fullname} technology division have
+                played a pivotal role in driving innovation within the industry.
+                My goal is to exceed your expectations with the quality and
+                efficiency of the services provided.
               </p>
             </div>
           </div>

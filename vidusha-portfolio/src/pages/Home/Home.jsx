@@ -7,16 +7,18 @@ import Projects from "../Projects/Projects";
 import Services from "../Services/Services";
 import Contact from "../Contact/Contact";
 
+const fullname = "vidusha wijekoon";
+
 const Home = () => {
   return (
     <>
-      <Hero />
-      <About />
+      <Hero fullname={fullname} />
+      <About fullname={fullname} />
       <Resume />
       <Skills />
       <Projects />
-      <Services />
-      <Contact />
+      <Services fullname={fullname} />
+      <Contact fullname={fullname} />
     </>
   );
 };

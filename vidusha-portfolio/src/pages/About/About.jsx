@@ -1,13 +1,55 @@
 import "./about.css";
-
 import BlurOnIcon from "@mui/icons-material/BlurOn";
 
-const About = () => {
+const personalInfomation = [
+  {
+    id: 1,
+    title: "Birthday:",
+    description: "11 May 1990",
+  },
+  {
+    id: 2,
+    title: "UAE Phone:",
+    description: "(+971) 58 825 0962",
+  },
+  {
+    id: 3,
+    title: "Local Phone:",
+    description: "(+94) 76 887 1747",
+  },
+  {
+    id: 4,
+    title: "City:",
+    description: "Abu Shagara, Al Sharjah, UAE",
+  },
+  {
+    id: 5,
+    title: "Age:",
+    description: "33",
+  },
+  {
+    id: 6,
+    title: "Degree:",
+    description: "B.ENG Software Engineer",
+  },
+  {
+    id: 7,
+    title: "Email:",
+    description: "vidusha.wijekoon11@gmail.com",
+  },
+  {
+    id: 7,
+    title: "Freelance:",
+    description: "Available",
+  },
+];
+
+const About = ({ fullname }) => {
   return (
     <section id="about" className="about mb-5">
       <div className="about-me container">
         <div className="section-title mb-5">
-          <h1 className="text-uppercase">Learn more about Vidusha Wijekoon</h1>
+          <h1 className="text-uppercase">Learn more about {fullname}</h1>
         </div>
 
         <div className="row">
@@ -34,48 +76,16 @@ const About = () => {
               maintain websites
             </p>
             <div className="row">
-              <div className="col-lg-6">
-                <ul>
-                  <li>
-                    <BlurOnIcon className="mr-2 button-icons" />
-                    <strong>Birthday:</strong> <span>11 May 1990</span>
-                  </li>
-                  <li>
-                    <BlurOnIcon className="mr-2 button-icons" />
-                    <strong>UAE Phone:</strong> <span>(+971) 58 825 0962</span>
-                  </li>
-                  <li>
-                    <BlurOnIcon className="mr-2 button-icons" />
-                    <strong>Local Phone:</strong> <span>(+94) 76 887 1747</span>
-                  </li>
-                  <li>
-                    <BlurOnIcon className="mr-2 button-icons" />
-                    <strong>City:</strong>{" "}
-                    <span>Abu Shagara, Al Sharjah, UAE</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="col-lg-6">
-                <ul>
-                  <li>
-                    <BlurOnIcon className="mr-2 button-icons" />
-                    <strong>Age:</strong> <span>33</span>
-                  </li>
-                  <li>
-                    <BlurOnIcon className="mr-2 button-icons" />
-                    <strong>Degree:</strong> <span>Bachelor of Engineer</span>
-                  </li>
-                  <li>
-                    <BlurOnIcon className="mr-2 button-icons" />
-                    <strong>Email:</strong>{" "}
-                    <span>vidusha.wijekoon11@gmail.com</span>
-                  </li>
-                  <li>
-                    <BlurOnIcon className="mr-2 button-icons" />
-                    <strong>Freelance:</strong> <span>Available</span>
-                  </li>
-                </ul>
-              </div>
+              {personalInfomation.map(({ title, description }, index) => (
+                <div className="col-lg-6" key={index}>
+                  <ul>
+                    <li>
+                      <BlurOnIcon className="mr-2 button-icons" />
+                      <strong>{title}</strong> <span>{description}</span>
+                    </li>
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
         </div>

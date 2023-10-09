@@ -4,12 +4,12 @@ import PermPhoneMsgIcon from "@mui/icons-material/PermPhoneMsg";
 import AttachEmailIcon from "@mui/icons-material/AttachEmail";
 import MyLocationIcon from "@mui/icons-material/MyLocation";
 
-const Contact = () => {
+const Contact = ({ fullname }) => {
   return (
     <section id="contact" className="contact section-bg mb-5">
       <div className="container" data-aos="fade-up">
         <div className="section-title">
-          <h1 className="mb-5">Contact Vidusha Wijekoon</h1>
+          <h1 className="mb-5 text-capitalize">Contact {fullname}</h1>
         </div>
 
         <div className="row">

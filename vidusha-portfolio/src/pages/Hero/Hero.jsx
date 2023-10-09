@@ -3,14 +3,14 @@ import heroImage from "../../assets/images/hero-img.png";
 import DownloadResume from "../../components/DownloadResume/DownloadResume";
 import SocialMedia from "../../components/SocialMedia/SocialMedia";
 
-const Hero = () => {
+const Hero = ({ fullname }) => {
   return (
     <section id="hero" class="d-flex align-items-center">
       <div class="container-fluid" data-aos="fade-up">
         <div class="row justify-content-center">
           <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
             <div className="name-typing d-flex">
-              <h1 className="typing">Vidusha Wijekoon</h1>
+              <h1 className="typing text-capitalize">{fullname}</h1>
             </div>
             <h3 className="mb-3 lh-base">
               B.Eng Engineering in Software Engineer &amp; <br /> Full-Stack
