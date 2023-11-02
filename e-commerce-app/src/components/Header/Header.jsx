@@ -1,12 +1,28 @@
-import { useState } from "react";
+import { useRef } from "react";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { IconButton } from "@mui/material";
 
+let clicked = false;
+
 const Header = () => {
-  const [isSearch, setIsSearch] = useState(false);
+  const logoRef = useRef();
+  const searchBoxRef = useRef();
+  const searchBoxContainer = useRef();
+
+  const searchButonClickHandle = () => {
+    if (clicked) {
+      logoRef.current.style = "display: none";
+      searchBoxRef.current.style = "display: inline-block";
+      searchBoxContainer.current.style.backgroundColor = "#fdf3f3";
+    } else {
+      logoRef.current.style = "display: inline-block";
+      searchBoxRef.current.style = "display: none";
+      searchBoxContainer.current.style.backgroundColor = "inherit";
+    }
+  };
 
   return (
     <header className="fixed top-0 left-0 w-full z-[100] py-3 px-2 bg-my-background flex items-center justify-between drop-shadow-header-shadow">
@@ -16,23 +32,25 @@ const Header = () => {
           <MenuIcon sx={{ color: "#c82196" }} />
         </IconButton>
         <h1
-          className="text-sm font-bold"
+          ref={logoRef}
           style={{
             display:
               window.innerWidth < 640
-                ? isSearch
+                ? clicked
                   ? "none"
                   : "inline-block"
                 : "inline-block",
           }}
+          className="text-sm font-bold ml-2"
         >
           Vidusha <span className="text-[#c82196]">App</span>
         </h1>
         <div
+          ref={searchBoxContainer}
           style={{
             backgroundColor:
               window.innerWidth < 640
-                ? isSearch
+                ? clicked
                   ? "#fdf3f3"
                   : "inherit"
                 : "#fdf3f3",
@@ -40,12 +58,13 @@ const Header = () => {
           className="overflow-hidden ml-2 flex items-center rounded-full bg-[#fdf3f3]"
         >
           <input
+            ref={searchBoxRef}
             type="text"
             placeholder="Search"
             style={{
               display:
                 window.innerWidth < 640
-                  ? isSearch
+                  ? clicked
                     ? "inline-block"
                     : "none"
                   : "inline-block",
@@ -56,7 +75,8 @@ const Header = () => {
           <IconButton
             onClick={() => {
               if (window.innerWidth < 640) {
-                setIsSearch(!isSearch);
+                clicked = !clicked;
+                searchButonClickHandle();
               }
             }}
           >
@@ -64,7 +84,7 @@ const Header = () => {
               sx={{
                 color:
                   window.innerWidth < 640
-                    ? isSearch
+                    ? clicked
                       ? "rga(156 163 175)"
                       : "black"
                     : "rga(156 163 175)",
