@@ -1,6 +1,6 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { IconButton } from "@mui/material";
+import { IconButton, Rating } from "@mui/material";
 
 // Import Swiper styles
 import "swiper/css";
@@ -69,14 +69,19 @@ const productArr = [
   },
 ];
 
-const Product = ({ title, rowsCount, slidesPerView }) => {
+const Product = ({ title }) => {
   return (
-    <section className="w-full mt-5">
-      <h1 className="text-lg font-bold mb-3">{title}</h1>
+    <section
+      style={{
+        boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px ",
+      }}
+      className="w-full mt-5 p-2 mb-4"
+    >
+      <h1 className="text-lg font-bold mb-3 mt-2 ml-2">{title}</h1>
       <Swiper
-        slidesPerView={Number(slidesPerView)}
+        slidesPerView={3}
         grid={{
-          rows: Number(rowsCount),
+          rows: 1,
         }}
         spaceBetween={10}
         mousewheel={true}
@@ -119,6 +124,13 @@ const ProductUnit = ({ imageUrl, price, productTitle, id }) => (
         className="w-full object-contain"
       />
       <h3 className="text-sm font-semibold text-stone-900">{productTitle}</h3>
+      <Rating
+        name={imageUrl}
+        value={3.5}
+        precision={0.5}
+        size="small"
+        readOnly
+      />
       <h3 className="text-stone-900 font-bold text-lg">Rs.{price}/-</h3>
     </div>
   </IconButton>

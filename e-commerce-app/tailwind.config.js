@@ -13,7 +13,8 @@ module.exports = {
         success: "#bfa094",
       },
       dropShadow: {
-        "header-shadow": "0 5px 15px rgba(0, 0, 0, 0.35)",
+        "header-shadow": "rgba(0, 0, 0, 0.35) 0px 5px 15px ",
+        "product-shadow": "rgba(0, 0, 0, 0.24) 0px 3px 8px ",
       },
     },
   },
