@@ -13,7 +13,7 @@ const Footer = () => {
   });
 
   return (
-    <footer className="fixed bottom-0 left-0 w-full z-[100] py-5 px-2 bg-my-background flex items-center justify-between drop-shadow-header-shadow">
+    <footer className="fixed bottom-0 md:gap-5 left-0 w-full z-[100] p-3 bg-my-background flex items-center justify-between drop-shadow-header-shadow">
       <FooterIcon
         clickFun={{ whoIsClick, setWhoIsClick }}
         Icon={HomeOutlinedIcon}
@@ -24,11 +24,13 @@ const Footer = () => {
         Icon={AppsOutlinedIcon}
         iconText="Category"
       />
-      <FooterIcon
-        clickFun={{ whoIsClick, setWhoIsClick }}
-        Icon={AccountCircleOutlinedIcon}
-        iconText="Profile"
-      />
+      <div className="md:flex-1 md:text-right">
+        <FooterIcon
+          clickFun={{ whoIsClick, setWhoIsClick }}
+          Icon={AccountCircleOutlinedIcon}
+          iconText="Profile"
+        />
+      </div>
     </footer>
   );
 };

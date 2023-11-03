@@ -1,6 +1,6 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { IconButton, Rating } from "@mui/material";
+import { ListItemButton, Rating } from "@mui/material";
 
 // Import Swiper styles
 import "swiper/css";
@@ -17,7 +17,8 @@ const productArr = [
     imageUrl:
       "https://e0.pxfuel.com/wallpapers/966/252/desktop-wallpaper-nature-water.jpg",
     price: 100,
-    productTitle: "Product Title 1",
+    productTitle:
+      "Product Title 1 Product Title 1 Product Title 1 Product Title 1 Product Title 1 Product Title 1",
   },
   {
     imageUrl:
@@ -75,7 +76,7 @@ const Product = ({ title }) => {
       style={{
         boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px ",
       }}
-      className="w-full mt-5 p-2 mb-4"
+      className="w-full mt-6 p-2 mb-4"
     >
       <h1 className="text-lg font-bold mb-3 mt-2 ml-2">{title}</h1>
       <Swiper
@@ -108,22 +109,17 @@ const Product = ({ title }) => {
 export default Product;
 
 const ProductUnit = ({ imageUrl, price, productTitle, id }) => (
-  <IconButton
-    sx={{
-      padding: "4px",
-      borderRadius: "5px",
-      color: "red",
-      margin: "3px",
-      marginBottom: "30px",
-    }}
-  >
-    <div className="w-full">
-      <img
-        src={imageUrl}
-        alt={`product_unit_${id}`}
-        className="w-full object-contain"
-      />
-      <h3 className="text-sm font-semibold text-stone-900">{productTitle}</h3>
+  <div className="w-full relative mb-5 pb-4">
+    <img
+      src={imageUrl}
+      alt={`product_unit_${id}`}
+      className="w-full sm:text-lg object-contain"
+    />
+    <div className="px-1 sm:px-2 ">
+      <h3 className="text-sx sm:text-sm text-sm text-justify font-semibold text-stone-900">
+        {String(productTitle).substring(0, 49)}
+        {String(productTitle).length > 49 ? "..." : null}
+      </h3>
       <Rating
         name={imageUrl}
         value={3.5}
@@ -133,5 +129,6 @@ const ProductUnit = ({ imageUrl, price, productTitle, id }) => (
       />
       <h3 className="text-stone-900 font-bold text-lg">Rs.{price}/-</h3>
     </div>
-  </IconButton>
+    <div className="absolute top-0 left-0 w-full h-full hover:bg-red-600 opacity-40"></div>
+  </div>
 );
