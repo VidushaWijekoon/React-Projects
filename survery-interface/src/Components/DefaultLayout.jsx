@@ -7,26 +7,35 @@ import {
     MenuItem,
     MenuItems,
 } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import { NavLink, Outlet } from "react-router-dom";
+import {
+    Bars3Icon,
+    BellIcon,
+    UserIcon,
+    XMarkIcon,
+} from "@heroicons/react/24/outline";
+import { Navigate, NavLink, Outlet } from "react-router-dom";
+import { userStateContext } from "../Context/ContextProvider";
 
-const user = {
-    name: "Tom Cook",
-    email: "tom@example.com",
-    imageUrl:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-};
 const navigation = [
     { name: "Dashboard", to: "/" },
     { name: "Survey", to: "/survey" },
 ];
-const userNavigation = [{ name: "Sign out", href: "#" }];
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
 }
 
 const DefaultLayout = () => {
+    const { currentUser, userToken } = userStateContext();
+
+    if (!userToken) {
+        return <Navigate to="login" />;
+    }
+
+    const logout = (ev) => {
+        ev.preventDefault();
+        alert("adad");
+    };
     return (
         <>
             <div className="min-h-full">
@@ -72,27 +81,22 @@ const DefaultLayout = () => {
                                                 <span className="sr-only">
                                                     Open user menu
                                                 </span>
-                                                <img
-                                                    alt=""
-                                                    src={user.imageUrl}
-                                                    className="h-8 w-8 rounded-full"
-                                                />
+                                                <UserIcon className="w-8 text-white h-8 p-1 bg-black/25 rounded-full" />
                                             </MenuButton>
                                         </div>
                                         <MenuItems
                                             transition
                                             className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
                                         >
-                                            {userNavigation.map((item) => (
-                                                <MenuItem key={item.name}>
-                                                    <a
-                                                        href={item.href}
-                                                        className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
-                                                    >
-                                                        {item.name}
-                                                    </a>
-                                                </MenuItem>
-                                            ))}
+                                            <MenuItem>
+                                                <a
+                                                    href="#"
+                                                    onClick={(ev) => logout(ev)}
+                                                    className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
+                                                >
+                                                    Sign Out
+                                                </a>
+                                            </MenuItem>
                                         </MenuItems>
                                     </Menu>
                                 </div>
@@ -140,32 +144,26 @@ const DefaultLayout = () => {
                         <div className="border-t border-gray-700 pb-3 pt-4">
                             <div className="flex items-center px-5">
                                 <div className="flex-shrink-0">
-                                    <img
-                                        alt=""
-                                        src={user.imageUrl}
-                                        className="h-10 w-10 rounded-full"
-                                    />
+                                    <UserIcon className="w-8 text-white h-8 p-1 bg-black/25 rounded-full" />
                                 </div>
                                 <div className="ml-3">
                                     <div className="text-base font-medium leading-none text-white">
-                                        {user.name}
+                                        {currentUser.name}
                                     </div>
                                     <div className="text-sm font-medium leading-none text-gray-400">
-                                        {user.email}
+                                        {currentUser.email}
                                     </div>
                                 </div>
                             </div>
                             <div className="mt-3 space-y-1 px-2">
-                                {userNavigation.map((item) => (
-                                    <DisclosureButton
-                                        key={item.name}
-                                        as="a"
-                                        href={item.href}
-                                        className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
-                                    >
-                                        {item.name}
-                                    </DisclosureButton>
-                                ))}
+                                <DisclosureButton
+                                    as="a"
+                                    href="#"
+                                    onClick={(ev) => logout(ev)}
+                                    className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+                                >
+                                    Sign Out
+                                </DisclosureButton>
                             </div>
                         </div>
                     </DisclosurePanel>
