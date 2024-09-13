@@ -1,6 +1,6 @@
 const Signup = () => {
     return (
-        <>
+        <div>
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                 <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
                     Sign Up for Free
@@ -67,7 +67,7 @@ const Signup = () => {
                     Start a 14 day free trial
                 </a>
             </p>
-        </>
+        </div>
     );
 };
 
