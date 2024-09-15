@@ -1,10 +1,13 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
+import DefaultLayout from "../Components/DefaultLayout";
 import Dashboard from "../Views/Dashboard";
-import Surverys from "../Views/Surverys";
+import Surveys from "../Views/Surveys";
+import SurveyView from "../Views/SurveyView";
 import Login from "../Views/Login";
 import Signup from "../Views/Signup";
+import SurveyPublicView from "../Views/SurveyPublicView";
 import GuestLayout from "../Components/GuestLayout";
-import DefaultLayout from "../Components/DefaultLayout";
+
 
 const router = createBrowserRouter([
     {
@@ -20,8 +23,16 @@ const router = createBrowserRouter([
                 element: <Dashboard />,
             },
             {
-                path: "/survey",
-                element: <Surverys />,
+                path: "/surveys",
+                element: <Surveys />,
+            },
+            {
+                path: "/surveys/create",
+                element: <SurveyView />,
+            },
+            {
+                path: "/surveys/:id",
+                element: <SurveyView />,
             },
         ],
     },
@@ -38,6 +49,10 @@ const router = createBrowserRouter([
                 element: <Signup />,
             },
         ],
+    },
+    {
+        path: "/survey/public/:slug",
+        element: <SurveyPublicView />,
     },
 ]);
 
