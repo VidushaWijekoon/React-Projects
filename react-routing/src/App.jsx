@@ -5,6 +5,9 @@ import RecipeDetailsPage from "./pages/recipe-details/RecipeDetailsPage";
 import NotFoundPage from "./pages/not-found/NotFoundPage";
 import Layout from "./layouts/Layout";
 import ReactHookFormPage from "./pages/react-hook-form/ReactHookFormPage";
+import Hooks from "./pages/hooks/Hooks";
+import Memo from "./pages/hooks/Memo";
+import Callback from "./pages/hooks/Callback";
 
 const CustomeRoutes = () => {
     const element = useRoutes([
@@ -29,6 +32,18 @@ const CustomeRoutes = () => {
         {
             path: "/react-hook-form",
             element: <ReactHookFormPage />,
+        },
+        {
+            path: "/react-hooks",
+            element: <Hooks />,
+        },
+        {
+            path: "/react-memo",
+            element: <Memo />,
+        },
+        {
+            path: "/react-callback",
+            element: <Callback />,
         },
         {
             path: "*",
