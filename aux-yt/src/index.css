@@ -10,12 +10,73 @@
 
 body {
     font-family: "Exo 2", sans-serif;
+    overflow-x: hidden;
+}
+
+.header__container {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 100px;
+    background-color: rgb(255, 238, 238);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__container .header__menuClose {
+    cursor: pointer;
+}
+
+.header__container .header__menu {
+    margin: 50px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.header__container nav {
+    position: relative;
+}
+
+.header__container nav ul {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    height: 100vh;
+    padding: 20px;
+    background-color: rgb(255, 144, 144);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    transition: all 400ms ease-in;
+}
+
+.header__container nav ol {
+    display: none;
+}
+
+.header__container nav ul li {
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 400ms ease-in;
+}
+
+.header__container nav ul li:hover {
+    color: rgb(180, 48, 48);
 }
 
 .main__container {
     margin: 0 auto;
     display: flex;
     margin-top: 50px;
+    width: 100vw;
 }
 
 .main__container .main__left {
@@ -50,4 +111,28 @@ body {
 .unit__container img {
     width: 100%;
     object-fit: contain;
+}
+
+@media only screen and (min-width: 768px) {
+    .header__container nav ul,
+    .header__container nav .header__menuClick {
+        display: none;
+    }
+
+    .header__container nav ol {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .header__container nav ol li {
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .header__container nav ol li:hover {
+        color: red;
+        transition: all 400ms ease-in;
+    }
 }
